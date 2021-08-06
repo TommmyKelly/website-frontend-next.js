@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { server } from "../config";
 
 export default function Home({ videos }) {
   console.log(videos);
@@ -25,8 +26,9 @@ export default function Home({ videos }) {
         </p>
 
         <div className='flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full'>
-          {videos.map((video) => (
+          {videos.map((video, index) => (
             <a
+              key={index}
               href='https://nextjs.org/docs'
               className='p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600'
             >
@@ -94,7 +96,7 @@ export default function Home({ videos }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:1337/videos?_sort=title:ASC");
+  const res = await fetch(`${server}/videos`);
   const videos = await res.json();
 
   return {
