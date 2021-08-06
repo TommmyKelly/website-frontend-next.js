@@ -1,14 +1,21 @@
 import Head from "next/head";
 import { server } from "../config";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Home({ videos }) {
-  console.log(videos);
+  const router = useRouter();
+
   return (
     <div className='flex flex-col items-center justify-center min-h-screen py-2'>
       <Head>
         <title>Create Next App</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
+
+      <Link href='/[slug]' as={"/react"}>
+        click here
+      </Link>
 
       <main className='flex flex-col items-center justify-center w-full flex-1 px-20 text-center'>
         <h1 className='text-6xl font-bold'>
