@@ -8,7 +8,7 @@ const article = ({ article }) => {
 
   return (
     <>
-      <h1>{article[0].Title}</h1>
+      <h1>{article.Title}</h1>
       <Link href='/'>Go Back</Link>
     </>
   );
@@ -22,7 +22,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
   return {
     props: {
-      article,
+      article: article[0],
     },
   };
 };
