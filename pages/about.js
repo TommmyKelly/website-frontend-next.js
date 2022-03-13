@@ -4,7 +4,6 @@ import router, { useRouter } from "next/router";
 export default function Home({ res }) {
   const router = useRouter();
 
-  console.log(router);
   return (
     <div className='flex flex-col items-center justify-center flex-1 py-2'>
       <Head>

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { server } from "../config";
+import { server } from "@/config/index";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Cards from "@/components/Cards";

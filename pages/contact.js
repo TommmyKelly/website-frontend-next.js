@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div className='flex flex-col items-center  py-2'>
+    <div className='flex flex-col items-center m-auto shadow-md mt-10 border rounded bg-white w-3/5  py-2'>
       <form
         action='https://formsubmit.co/tommy_kelly@icloud.com'
         method='POST'
@@ -22,9 +22,6 @@ const Contact = () => {
               name='name'
               required
             />
-            {/* <p className='text-red-500 text-xs italic'>
-              Please fill out this field.
-            </p> */}
           </div>
           <div className='w-full md:w-1/2 px-3'>
             <label

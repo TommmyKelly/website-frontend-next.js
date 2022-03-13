@@ -1,6 +1,5 @@
 import Cards from "@/components/Cards";
-import Link from "next/link";
-import { server } from "../config";
+import { server } from "@/config/index";
 
 const Python = ({ posts }) => {
   return <Cards posts={posts} />;
