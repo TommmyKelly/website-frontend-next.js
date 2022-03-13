@@ -7,7 +7,7 @@ const article = ({ article }) => {
   console.log(article);
 
   return (
-    <div className='flex flex-col items-center min-h-screen h-full py-2 relative'>
+    <div className='flex flex-col items-center min-h-screen py-2 relative'>
       <div className='w-2/5 m'>
         <div class='aspect-w-16 aspect-h-9'>
           <iframe

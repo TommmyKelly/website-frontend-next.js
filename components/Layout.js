@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
       <div
         className={`absolute transition duration-200 transform  ${
           show ? "translate-x-0" : "-translate-x-full"
-        }  w-64  bg-black p-3 lg:relative  lg:inset-y-0 lg:left-0 lg:translate-x-0`}
+        }  w-64  bg-black p-3 lg:relative  lg:inset-y-0 lg:left-0 lg:translate-x-0 z-30`}
       >
         <div className='flex justify-between p-3 text-white '>
           <h1>Menu</h1>
@@ -34,33 +34,9 @@ const Layout = ({ children }) => {
           </span>
         </div>
 
-        <Link href='/'>
-          <div
-            className='bg-pink-400 rounded p-2 cursor-pointer mb-1'
-            onClick={() => setShow(!show)}
-          >
-            Home
-          </div>
-        </Link>
-        <Link href='/about'>
-          <div
-            className='bg-pink-400 rounded p-2 cursor-pointer mb-1'
-            onClick={() => setShow(!show)}
-          >
-            About
-          </div>
-        </Link>
-        <Link href='/contact'>
-          <div
-            className='bg-pink-400 rounded p-2 cursor-pointer mb-1'
-            onClick={() => setShow(!show)}
-          >
-            Contact
-          </div>
-        </Link>
         <NavLinks setShow={setShow} show={show} />
       </div>
-      <div className='flex-1 '>
+      <div className='flex-1'>
         <header className='bg-black h-10 flex items-center text-white pl-3 '>
           <span
             className='hover:cursor-pointer lg:hidden'
@@ -84,6 +60,18 @@ const Layout = ({ children }) => {
           <span className='m-auto'>tommykelly100</span>
         </header>
         {children}
+
+        {/* <footer className='flex items-center justify-center w-full h-24 border-t'>
+          <a
+            className='flex items-center justify-center'
+            href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Powered by{" "}
+            <img src='/vercel.svg' alt='Vercel Logo' className='h-4 ml-2' />
+          </a>
+        </footer> */}
       </div>
     </div>
   );

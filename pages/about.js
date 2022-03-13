@@ -6,7 +6,7 @@ export default function Home({ res }) {
 
   console.log(router);
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen py-2'>
+    <div className='flex flex-col items-center justify-center flex-1 py-2'>
       <Head>
         <title>Create Next App</title>
         <link rel='icon' href='/favicon.ico' />
