@@ -7,10 +7,18 @@ const article = ({ article }) => {
   console.log(article);
 
   return (
-    <>
-      <h1>{article.Title}</h1>
-      <Link href='/'>Go Back</Link>
-    </>
+    <div className='flex flex-col items-center min-h-screen h-full py-2 relative'>
+      <div className='w-2/5 m'>
+        <div class='aspect-w-16 aspect-h-9'>
+          <iframe
+            src={`https://www.youtube.com/embed/${article.video_url}`}
+            frameborder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
   );
 };
 
