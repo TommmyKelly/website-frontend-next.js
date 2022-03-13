@@ -1,16 +1,18 @@
 import { useState } from "react";
+import Link from "next/link";
+import NavLinks from "./NavLinks";
 
-const test = ({ children }) => {
+const Layout = ({ children }) => {
   const [show, setShow] = useState(false);
   return (
-    <div className='flex'>
+    <div className='flex min-h-screen'>
       <div
-        className={`absolute transition duration-200 transform ${
+        className={`absolute transition duration-200 transform  ${
           show ? "translate-x-0" : "-translate-x-full"
-        }  w-80 h-screen bg-red-500 p-3 lg:relative  lg:inset-y-0 lg:left-0 lg:translate-x-0`}
+        }  w-64  bg-black p-3 lg:relative  lg:inset-y-0 lg:left-0 lg:translate-x-0`}
       >
-        <div className='flex justify-between p-3 text-white'>
-          <h1>hi</h1>
+        <div className='flex justify-between p-3 text-white '>
+          <h1>Menu</h1>
           <span
             className='cursor-pointer lg:hidden'
             onClick={() => setShow(!show)}
@@ -31,10 +33,27 @@ const test = ({ children }) => {
             </svg>
           </span>
         </div>
-        <div className='bg-pink-400 rounded p-2'>test</div>
+
+        <Link href='/'>
+          <div
+            className='bg-pink-400 rounded p-2 cursor-pointer mb-1'
+            onClick={() => setShow(!show)}
+          >
+            Home
+          </div>
+        </Link>
+        <Link href='/about'>
+          <div
+            className='bg-pink-400 rounded p-2 cursor-pointer mb-1'
+            onClick={() => setShow(!show)}
+          >
+            About
+          </div>
+        </Link>
+        <NavLinks setShow={setShow} show={show} />
       </div>
-      <div className='flex-1'>
-        <header className='bg-black h-10 flex items-center text-white pl-3'>
+      <div className='flex-1 '>
+        <header className='bg-black h-10 flex items-center text-white pl-3 '>
           <span
             className='hover:cursor-pointer lg:hidden'
             onClick={() => setShow(!show)}
@@ -54,6 +73,7 @@ const test = ({ children }) => {
               />
             </svg>
           </span>
+          <span className='m-auto'>tommykelly100</span>
         </header>
         {children}
       </div>
@@ -61,4 +81,4 @@ const test = ({ children }) => {
   );
 };
 
-export default test;
+export default Layout;
