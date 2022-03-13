@@ -50,6 +50,14 @@ const Layout = ({ children }) => {
             About
           </div>
         </Link>
+        <Link href='/contact'>
+          <div
+            className='bg-pink-400 rounded p-2 cursor-pointer mb-1'
+            onClick={() => setShow(!show)}
+          >
+            Contact
+          </div>
+        </Link>
         <NavLinks setShow={setShow} show={show} />
       </div>
       <div className='flex-1 '>
