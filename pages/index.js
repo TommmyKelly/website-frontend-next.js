@@ -1,30 +1,28 @@
 import Head from "next/head";
 import { server } from "@/config/index";
 import { useRouter } from "next/router";
-import Link from "next/link";
+import Meta from "@/components/Meta";
 import Cards from "@/components/Cards";
 
 export default function Home({ videos }) {
   const router = useRouter();
 
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen py-2'>
-      <Head>
-        <title>Create Next App</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+    <>
+      <Meta />
+      <div className='flex flex-col items-center justify-center min-h-screen py-2'>
+        <main className='flex flex-col items-center justify-center w-full flex-1 px-20 text-center'>
+          <h1 className='text-6xl font-bold'>
+            Welcome to{" "}
+            <a className='text-blue-600' href='https://nextjs.org'>
+              Next.js!
+            </a>
+          </h1>
 
-      <main className='flex flex-col items-center justify-center w-full flex-1 px-20 text-center'>
-        <h1 className='text-6xl font-bold'>
-          Welcome to{" "}
-          <a className='text-blue-600' href='https://nextjs.org'>
-            Next.js!
-          </a>
-        </h1>
-
-        <Cards posts={videos} />
-      </main>
-    </div>
+          <Cards posts={videos} />
+        </main>
+      </div>
+    </>
   );
 }
 

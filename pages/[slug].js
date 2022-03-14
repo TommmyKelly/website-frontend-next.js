@@ -1,3 +1,4 @@
+import Meta from "@/components/Meta";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -5,18 +6,25 @@ import { server } from "../config";
 
 const article = ({ article }) => {
   return (
-    <div className='flex flex-col items-center min-h-screen py-2 relative'>
-      <div className='w-2/5 m'>
-        <div class='aspect-w-16 aspect-h-9'>
-          <iframe
-            src={`https://www.youtube.com/embed/${article.video_url}`}
-            frameborder='0'
-            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-            allowFullScreen
-          ></iframe>
+    <>
+      <Meta
+        title={article.video_title}
+        description={article.meta_description}
+        keywords={article.Meta_keywords}
+      />
+      <div className='flex flex-col items-center min-h-screen py-2 relative'>
+        <div className='w-2/5 m'>
+          <div class='aspect-w-16 aspect-h-9'>
+            <iframe
+              src={`https://www.youtube.com/embed/${article.video_url}`}
+              frameborder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
