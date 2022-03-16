@@ -25,30 +25,30 @@ const Home = ({ videos }) => {
     </>
   );
 };
-// export async function getStaticProps() {
-//   const res = await fetch(`${server}/videos`);
-//   const videos = await res.json();
-
-//   return {
-//     props: {
-//       videos,
-//     },
-//     // Next.js will attempt to re-generate the page:
-//     // - When a request comes in
-//     // - At most once every 10 seconds
-//     // revalidate: 10, // In seconds
-//   };
-// }
-
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   const res = await fetch(`${server}/videos`);
-
   const videos = await res.json();
 
   return {
     props: {
       videos,
     },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every 10 seconds
+    revalidate: 10, // In seconds
   };
-};
+}
+
+// export const getStaticProps = async () => {
+//   const res = await fetch(`${server}/videos`);
+
+//   const videos = await res.json();
+
+//   return {
+//     props: {
+//       videos,
+//     },
+//   };
+// };
 export default Home;
