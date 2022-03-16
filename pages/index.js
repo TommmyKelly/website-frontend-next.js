@@ -19,7 +19,7 @@ const Home = ({ videos }) => {
             </a>
           </h1>
 
-          <Cards posts={videos} />
+          {/* <Cards posts={videos} /> */}
         </main>
       </div>
     </>
@@ -42,8 +42,9 @@ const Home = ({ videos }) => {
 
 export const getStaticProps = async () => {
   const res = await fetch(`${server}/videos`);
-  const videos = await res.json();
 
+  const videos = await res.json();
+  console.log(videos);
   return {
     props: {
       videos,
