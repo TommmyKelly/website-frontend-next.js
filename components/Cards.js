@@ -40,13 +40,13 @@ const Cards = ({ posts }) => {
                     {/* <!-- Author --> */}
                     <a className='font-semibold hover:underline'>
                       {" "}
-                      EgoistDeveloper{" "}
+                      {/* EgoistDeveloper{" "} */}
                     </a>
                     in
                     {/* <!-- Category --> */}
                     <a className='font-semibold hover:underline'>
                       {" "}
-                      e-commerce{" "}
+                      {/* e-commerce{" "} */}
                     </a>
                   </div>
 

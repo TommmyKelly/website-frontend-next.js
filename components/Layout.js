@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   const [show, setShow] = useState(false);
   return (
     <>
-      <div className='flex min-h-screen bg-gray-100'>
+      <div className='flex min-h-screen  bg-gray-100'>
         <div
           className={`absolute transition duration-200 transform  ${
             show ? "translate-x-0" : "-translate-x-full"

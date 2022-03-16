@@ -14,10 +14,10 @@ const article = ({ article }) => {
       />
       <div className='flex flex-col items-center min-h-screen py-2 relative'>
         <div className='w-2/5 m'>
-          <div class='aspect-w-16 aspect-h-9'>
+          <div className='aspect-w-16 aspect-h-9'>
             <iframe
               src={`https://www.youtube.com/embed/${article.video_url}`}
-              frameborder='0'
+              frameBorder='0'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
               allowFullScreen
             ></iframe>
