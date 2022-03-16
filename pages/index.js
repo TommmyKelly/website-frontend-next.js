@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Meta from "@/components/Meta";
 import Cards from "@/components/Cards";
 
-export default function Home({ videos }) {
+const Home = ({ videos }) => {
   const router = useRouter();
 
   return (
@@ -24,9 +24,23 @@ export default function Home({ videos }) {
       </div>
     </>
   );
-}
+};
+// export async function getStaticProps() {
+//   const res = await fetch(`${server}/videos`);
+//   const videos = await res.json();
 
-export async function getStaticProps() {
+//   return {
+//     props: {
+//       videos,
+//     },
+//     // Next.js will attempt to re-generate the page:
+//     // - When a request comes in
+//     // - At most once every 10 seconds
+//     // revalidate: 10, // In seconds
+//   };
+// }
+
+export const getStaticProps = async () => {
   const res = await fetch(`${server}/videos`);
   const videos = await res.json();
 
@@ -34,9 +48,6 @@ export async function getStaticProps() {
     props: {
       videos,
     },
-    // Next.js will attempt to re-generate the page:
-    // - When a request comes in
-    // - At most once every 10 seconds
-    revalidate: 10, // In seconds
   };
-}
+};
+export default Home;
