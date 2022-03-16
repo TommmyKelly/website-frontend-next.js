@@ -40,15 +40,4 @@ export async function getStaticProps() {
   };
 }
 
-// export const getStaticProps = async () => {
-//   const res = await fetch(`${server}/videos`);
-
-//   const videos = await res.json();
-
-//   return {
-//     props: {
-//       videos,
-//     },
-//   };
-// };
 export default Home;
