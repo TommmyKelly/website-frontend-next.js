@@ -60,7 +60,7 @@ const Layout = ({ children }) => {
             </span>
             <span className='m-auto'>tommykelly100</span>
           </header>
-          <main className='w-full h-full'>{children}</main>
+          {children}
 
           {/* <footer className='flex items-center justify-center w-full h-24 border-t'>
           <a

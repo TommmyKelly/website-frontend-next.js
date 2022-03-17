@@ -30,7 +30,6 @@ const article = ({ article }) => {
 
 //getServerSideProps()
 export const getStaticProps = async ({ params: { slug } }) => {
-  console.log(`Building slug: ${slug}`);
   const res = await fetch(`${server}/videos/?slug=${slug}`);
 
   const article = await res.json();
