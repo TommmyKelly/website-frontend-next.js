@@ -30,26 +30,24 @@ const Cards = ({ posts }) => {
                 {/* <!-- Body --> */}
                 <div className='flex flex-col bg-white rounded-b p-3'>
                   {/* <!-- Title --> */}
-                  <div className='text-sm font-semibold text-gray-900 hover:underline truncate'>
+                  <div className='text-sm font-semibold text-gray-900 hover:underline text-center'>
+                    {/* truncate */}
                     {post.video_title}
                   </div>
-
                   {/* <!-- Author - Category --> */}
-                  <div className='text-xxs text-gray-400 truncate mt-1'>
-                    by
-                    {/* <!-- Author --> */}
-                    <a className='font-semibold hover:underline'>
-                      {" "}
-                      {/* EgoistDeveloper{" "} */}
-                    </a>
-                    in
-                    {/* <!-- Category --> */}
-                    <a className='font-semibold hover:underline'>
-                      {" "}
-                      {/* e-commerce{" "} */}
-                    </a>
-                  </div>
-
+                  {/* <div className='text-xxs text-gray-400 truncate mt-1'>
+                    by */}
+                  {/* <!-- Author --> */}
+                  {/* <a className='font-semibold hover:underline'>
+                      {" "} */}
+                  {/* EgoistDeveloper{" "} */}
+                  {/* </a>
+                    in */}
+                  {/* <!-- Category --> */}
+                  {/* <a className='font-semibold hover:underline'> */}{" "}
+                  {/* e-commerce{" "} */}
+                  {/* </a>
+                  </div> */}
                   {/* <!-- Body --> */}
                   <div className='flex flex-row mt-2 '>
                     {/* <!-- Detail Column --> */}

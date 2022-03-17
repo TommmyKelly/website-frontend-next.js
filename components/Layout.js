@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import NavLinks from "./NavLinks";
+import Search from "./Search";
 
 const Layout = ({ children }) => {
   const [show, setShow] = useState(false);
@@ -38,7 +39,7 @@ const Layout = ({ children }) => {
           <NavLinks setShow={setShow} show={show} />
         </div>
         <div className='flex-1'>
-          <header className='bg-black h-10 flex items-center text-white pl-3 '>
+          <header className='bg-black h-14 flex items-center justify-center text-white pl-3 '>
             <span
               className='hover:cursor-pointer lg:hidden'
               onClick={() => setShow(!show)}
@@ -58,7 +59,8 @@ const Layout = ({ children }) => {
                 />
               </svg>
             </span>
-            <span className='m-auto'>tommykelly100</span>
+            <div className='flex-1 text-center'></div>
+            <Search />
           </header>
           {children}
 
