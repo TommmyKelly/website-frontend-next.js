@@ -7,7 +7,7 @@ const Cards = ({ posts }) => {
         <div key={post.id}>
           <Link href={`/${post.slug}`}>
             <div className='flex flex-col items-center justify-center mt-32 '>
-              <div className='flex flex-col shadow-md cursor-pointer w-96 hover:-translate-y-1 duration-300'>
+              <div className='flex flex-col shadow-md cursor-pointer w-80 hover:-translate-y-1 duration-300'>
                 {/* <!-- Preview --> */}
                 <div className='inline relative group h-48'>
                   {/* <!-- Thumbnail --> */}

@@ -12,8 +12,8 @@ const article = ({ article }) => {
         description={article.meta_description}
         keywords={article.Meta_keywords}
       />
-      <div className='flex flex-col items-center min-h-screen py-2 relative mt-40'>
-        <div className='w-2/5 m'>
+      <div className='flex flex-col items-center min-h-screen py-2 relative'>
+        <div className='w-3/4 '>
           <div className='aspect-w-16 aspect-h-9'>
             <iframe
               src={`https://www.youtube.com/embed/${article.video_url}`}

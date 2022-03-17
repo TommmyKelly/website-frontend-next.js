@@ -10,17 +10,12 @@ const Home = ({ videos }) => {
   return (
     <>
       <Meta />
-      <div className='flex flex-col items-center justify-center min-h-screen py-2'>
-        <main className='flex flex-col items-center justify-center w-full flex-1 px-20 text-center'>
-          <h1 className='text-6xl font-bold'>
-            Welcome to{" "}
-            <a className='text-blue-600' href='https://nextjs.org'>
-              Next.js!
-            </a>
-          </h1>
+      <div className='flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100'>
+        <h1 className='text-6xl font-bold text-center'>
+          Coding <span className='text-blue-600'>Tutorials</span>
+        </h1>
 
-          <Cards posts={videos} />
-        </main>
+        <Cards posts={videos} />
       </div>
     </>
   );
@@ -40,4 +35,15 @@ export async function getStaticProps() {
   };
 }
 
+// export const getStaticProps = async () => {
+//   const res = await fetch(`${server}/videos`);
+
+//   const videos = await res.json();
+
+//   return {
+//     props: {
+//       videos,
+//     },
+//   };
+// };
 export default Home;
