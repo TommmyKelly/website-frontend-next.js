@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
             show ? "translate-x-0 " : "-translate-x-full"
           }  w-64  bg-black p-3 lg:relative  lg:inset-y-0 lg:left-0 lg:translate-x-0 z-30 `}
         >
-          <div className=' sidebar flex flex-col sticky top-5 justify-between p-3 text-white'>
+          <div className='sidebar flex flex-col sticky top-5 justify-between p-3 text-white'>
             <div className='flex justify-between mb-1'>
               <h1>Menu</h1>
               <span
@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
           </div>
         </div>
         <div className='flex-1'>
-          <header className='bg-black h-14 flex items-center justify-center text-white pl-3 '>
+          <header className='bg-black h-14 flex items-center justify-center text-white pl-3 sticky top-0 z-10'>
             <span
               className='hover:cursor-pointer hover:text-pink-400 lg:hidden'
               onClick={() => setShow(!show)}
@@ -61,7 +61,7 @@ const Layout = ({ children }) => {
                 />
               </svg>
             </span>
-            <div className='flex-1 text-center sticky top-0 z-10'></div>
+            <div className='flex-1 text-center  top-0 z-10'></div>
             <Search />
           </header>
           {children}
