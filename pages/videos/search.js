@@ -30,7 +30,7 @@ export async function getServerSideProps({ query: { term } }) {
     },
   });
 
-  const res = await fetch(`${server}/videos?${query}`);
+  const res = await fetch(`${server}/videos?${query})&_sort=created_at:desc`);
 
   const videos = await res.json();
 

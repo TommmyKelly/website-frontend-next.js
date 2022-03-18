@@ -9,39 +9,41 @@ const Layout = ({ children }) => {
     <>
       <div className='flex min-h-screen w-full  bg-gray-100'>
         <div
-          className={`absolute transition duration-200 transform  ${
-            show ? "translate-x-0" : "-translate-x-full"
-          }  w-64  bg-black p-3 lg:relative  lg:inset-y-0 lg:left-0 lg:translate-x-0 z-30`}
+          className={`fixed transition duration-200 transform  ${
+            show ? "translate-x-0 " : "-translate-x-full"
+          }  w-64  bg-black p-3 lg:relative  lg:inset-y-0 lg:left-0 lg:translate-x-0 z-30 `}
         >
-          <div className='flex justify-between p-3 text-white '>
-            <h1>Menu</h1>
-            <span
-              className='cursor-pointer lg:hidden'
-              onClick={() => setShow(!show)}
-            >
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                className='h-6 w-6'
-                fill='none'
-                viewBox='0 0 24 24'
-                stroke='currentColor'
+          <div className=' sidebar flex flex-col sticky top-5 justify-between p-3 text-white'>
+            <div className='flex justify-between mb-1'>
+              <h1>Menu</h1>
+              <span
+                className='cursor-pointer lg:hidden hover:text-pink-400'
+                onClick={() => setShow(!show)}
               >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth='2'
-                  d='M15 19l-7-7 7-7'
-                />
-              </svg>
-            </span>
-          </div>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  className='h-6 w-6'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2'
+                    d='M15 19l-7-7 7-7'
+                  />
+                </svg>
+              </span>
+            </div>
 
-          <NavLinks setShow={setShow} show={show} />
+            <NavLinks setShow={setShow} show={show} />
+          </div>
         </div>
         <div className='flex-1'>
           <header className='bg-black h-14 flex items-center justify-center text-white pl-3 '>
             <span
-              className='hover:cursor-pointer lg:hidden'
+              className='hover:cursor-pointer hover:text-pink-400 lg:hidden'
               onClick={() => setShow(!show)}
             >
               <svg
@@ -59,7 +61,7 @@ const Layout = ({ children }) => {
                 />
               </svg>
             </span>
-            <div className='flex-1 text-center'></div>
+            <div className='flex-1 text-center sticky top-0 z-10'></div>
             <Search />
           </header>
           {children}

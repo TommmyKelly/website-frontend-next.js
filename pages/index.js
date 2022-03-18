@@ -21,7 +21,7 @@ const Home = ({ videos }) => {
   );
 };
 export async function getStaticProps() {
-  const res = await fetch(`${server}/videos`);
+  const res = await fetch(`${server}/videos?_sort=created_at:desc`);
   const videos = await res.json();
 
   return {
